@@ -1,3 +1,45 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Release workflow
+
+```bash
+npm run changeset   # describe a change; creates a .changeset/*.md file
+npm run version     # bump versions from pending changesets
+```
+
+No build step. No test suite. The only scripts are changeset management.
+
+## Skill structure
+
+Every skill is a directory with a single `SKILL.md`. Frontmatter is required:
+
+```yaml
+---
+name: skill-name           # kebab-case; becomes /skill-name when invoked
+description: "One line."   # human-facing if user-invoked, trigger-phrase-rich if model-invoked
+disable-model-invocation: true   # omit this line for model-invoked skills
+---
+```
+
+Additional reference files (`AGENT-BRIEF.md`, `OUT-OF-SCOPE.md`, etc.) live alongside `SKILL.md` in the same directory.
+
+## Adding a skill
+
+1. Create `skills/<bucket>/<skill-name>/SKILL.md` with the frontmatter above.
+2. Add the path to `.claude-plugin/plugin.json`'s `skills` array (stable buckets only).
+3. Add a bullet to the bucket's `README.md` under the correct invocation heading.
+4. Add a bullet to the top-level `README.md` under the correct bucket and invocation heading, with the link pointing to `./skills/<bucket>/<skill-name>/SKILL.md`.
+
+## Marketplace installation
+
+Install via: `npx skills@latest add thor-thunder/skills`
+
+The plugin manifest is `.claude-plugin/plugin.json`. Its `name` field is `thor-thunder-skills`.
+
+---
+
 Skills are organized into bucket folders under `skills/`:
 
 - `engineering/` — daily code work
