@@ -1,0 +1,44 @@
+{
+  "enabledPlugins": {
+    "mattpocock-skills@builtin": true
+  },
+  "permissions": {
+    "allow": [
+      "Bash(npm *)",
+      "Bash(git *)",
+      "Read",
+      "Edit",
+      "Write",
+      "Glob",
+      "Grep"
+    ]
+  },
+  "env": {
+    "SKIP_PLUGIN_MARKETPLACE": "true"
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_response.filePath // .tool_input.file_path' | { read -r f; prettier --write \"$f\" 2>/dev/null; } || true",
+            "statusMessage": "Formatting..."
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '✓ Skills repository ready. 23 skills available. Run /reload-skills to see them.'",
+            "statusMessage": "Loading skills..."
+          }
+        ]
+      }
+    ]
+  }
+}
