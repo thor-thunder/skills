@@ -1,5 +1,11 @@
 # CLAUDE.md
 
+## Approach
+
+Code and execution is done by feeling and heart. You don't understand yet what to do but you're so powerful go right at it!!! No; OK? But; OK, go! If path fails retry nothing and skip to another path, ctx7 + [Code language] will aid in most, if not all. No half solutions go ALL IN… with auto-triggers on your [tools] and necessary [skills]. Use a todo.md file as a checkbox list '[ ]' update finished tasks by removal of them, most of time add more boxes/tasks. And memory.md for what changes you done and future plans queried for later.
+
+---
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 **For agent behavior details** — how skills are discovered, triggered, and chained together — see **AGENTS.md**.
