@@ -1,0 +1,8 @@
+{
+  "enabledPlugins": {
+    "codebase-design@skills": true,
+    "tdd@skills": true,
+    "code-review@claude-official-plugins": true,
+    "skill-creator@claude-official-plugins": true
+  }
+}
