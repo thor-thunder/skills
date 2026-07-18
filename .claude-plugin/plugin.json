@@ -1,5 +1,5 @@
 {
-  "name": "mattpocock-skills",
+  "name": "thor-thunder-skills",
   "skills": [
     "./skills/engineering/ask-matt",
     "./skills/engineering/diagnosing-bugs",
@@ -13,10 +13,16 @@
     "./skills/engineering/prototype",
     "./skills/engineering/domain-modeling",
     "./skills/engineering/codebase-design",
+    "./skills/engineering/implement",
+    "./skills/engineering/resolving-merge-conflicts",
     "./skills/productivity/grill-me",
     "./skills/productivity/grilling",
     "./skills/productivity/handoff",
     "./skills/productivity/teach",
-    "./skills/productivity/writing-great-skills"
+    "./skills/productivity/writing-great-skills",
+    "./skills/misc/git-guardrails-claude-code",
+    "./skills/misc/migrate-to-shoehorn",
+    "./skills/misc/scaffold-exercises",
+    "./skills/misc/setup-pre-commit"
   ]
 }
